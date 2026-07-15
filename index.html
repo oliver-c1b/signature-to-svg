@@ -7,23 +7,20 @@
       name="description"
       content="Paste a bitmap signature and turn it into a clean SVG, privately in your browser."
     />
-    <meta name="theme-color" content="#f5f3ed" />
+    <meta name="theme-color" content="#2771b0" />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%231c2824'/%3E%3Cpath d='M12 40c9-3 13-14 19-14 4 0-3 14 2 14 5 0 8-10 12-10 3 0-1 8 1 9 2 1 4-2 7-3' fill='none' stroke='%23f7c96b' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232771b0'/%3E%3Cpath d='M12 40c9-3 13-14 19-14 4 0-3 14 2 14 5 0 8-10 12-10 3 0-1 8 1 9 2 1 4-2 7-3' fill='none' stroke='%23f2931f' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E"
     />
-    <title>Signature Trace — Bitmap to SVG</title>
+    <title>Signature Trace by DXSolutions — Bitmap to SVG</title>
   </head>
   <body>
     <div class="app-shell">
       <header class="topbar">
-        <a class="brand" href="." aria-label="Signature Trace home">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 40 40">
-              <path d="M6 26c5.5-1.8 7.8-8.8 11.8-8.8 2.8 0-2.1 9.4 1.3 9.4 3.6 0 5.5-6.8 8.4-6.8 2.3 0-.7 5.5.8 6.1 1.2.6 3-1 5-2.1" />
-            </svg>
-          </span>
-          <span>Signature Trace</span>
+        <a class="brand" href="." aria-label="DXSolutions Signature Trace home">
+          <span class="dx-wordmark" aria-hidden="true"><strong>DXS</strong><span>OLUTIONS</span></span>
+          <span class="brand-divider" aria-hidden="true"></span>
+          <span class="product-name">Signature Trace</span>
         </a>
 
         <div class="privacy-pill" title="Images are processed locally and never uploaded">
@@ -37,7 +34,7 @@
       <main>
         <section class="hero" aria-labelledby="page-title">
           <div>
-            <p class="eyebrow">BITMAP <span>→</span> VECTOR</p>
+            <p class="eyebrow"><strong>DXSOLUTIONS TOOL</strong> <span>·</span> BITMAP <span>→</span> VECTOR</p>
             <h1 id="page-title">A cleaner way to turn a signature into SVG.</h1>
           </div>
           <p class="hero-copy">
@@ -286,10 +283,17 @@
 
       <footer class="footer">
         <span id="engineStatus" class="engine-status"><i></i> Loading tracing engine…</span>
-        <span>
-          Powered by
-          <a href="https://potrace.sourceforge.net/" target="_blank" rel="noreferrer">Potrace</a>
-          via WebAssembly · GPL-2.0
+        <span class="footer-meta">
+          <span>
+            A browser tool from
+            <a href="https://dxsolutions.com/" target="_blank" rel="noreferrer">DXSolutions Ltd.</a>
+          </span>
+          <span class="footer-separator" aria-hidden="true">·</span>
+          <span>
+            Powered by
+            <a href="https://potrace.sourceforge.net/" target="_blank" rel="noreferrer">Potrace</a>
+            via WebAssembly · GPL-2.0
+          </span>
         </span>
       </footer>
     </div>

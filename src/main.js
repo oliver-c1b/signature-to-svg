@@ -236,7 +236,7 @@ function colorizeSvg(svg, color) {
   root.removeAttribute('xmlns:xlink');
   root.setAttribute('role', 'img');
   root.setAttribute('aria-label', 'Traced signature');
-  root.setAttribute('data-generated-by', 'Signature Trace');
+  root.setAttribute('data-generated-by', 'DXSolutions Signature Trace');
 
   const filledElements = root.querySelectorAll('[fill]');
   if (filledElements.length === 0) {

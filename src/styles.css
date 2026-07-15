@@ -3,14 +3,16 @@
   --paper: #f4f1ea;
   --surface: #fbfaf7;
   --surface-strong: #ffffff;
-  --ink: #17211e;
-  --muted: #68706c;
-  --faint: #969c98;
+  --ink: #21384a;
+  --muted: #64727d;
+  --faint: #929ca3;
   --line: #deddd6;
   --line-strong: #c9cbc3;
-  --accent: #f2bd59;
-  --accent-hover: #eaae3f;
-  --accent-soft: #fff4d9;
+  --brand-blue: #2771b0;
+  --brand-blue-dark: #1e6096;
+  --accent: #f2931f;
+  --accent-hover: #df8213;
+  --accent-soft: #fff0dc;
   --green: #2f765a;
   --danger: #a8473f;
   --shadow: 0 22px 70px rgb(38 42 37 / 8%);
@@ -33,8 +35,9 @@ body {
   min-height: 100vh;
   margin: 0;
   color: var(--ink);
+  border-top: 4px solid var(--accent);
   background:
-    radial-gradient(circle at 8% 2%, rgb(255 255 255 / 88%) 0, transparent 31rem),
+    radial-gradient(circle at 8% 2%, rgb(255 255 255 / 92%) 0, transparent 31rem),
     var(--paper);
 }
 
@@ -53,7 +56,7 @@ button:focus-visible,
 input:focus-visible,
 summary:focus-visible,
 label[for="fileInput"]:focus-visible {
-  outline: 3px solid rgb(47 118 90 / 30%);
+  outline: 3px solid rgb(39 113 176 / 30%);
   outline-offset: 3px;
 }
 
@@ -73,7 +76,7 @@ label[for="fileInput"]:focus-visible {
 
 .brand {
   display: inline-flex;
-  gap: 11px;
+  gap: 12px;
   align-items: center;
   color: var(--ink);
   font-size: 15px;
@@ -82,24 +85,39 @@ label[for="fileInput"]:focus-visible {
   text-decoration: none;
 }
 
-.brand-mark {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  place-items: center;
-  overflow: hidden;
-  color: var(--accent);
-  background: var(--ink);
-  border-radius: 12px;
-  box-shadow: 0 7px 15px rgb(23 33 30 / 13%);
+.dx-wordmark {
+  display: inline-flex;
+  width: 143px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  background: linear-gradient(105deg, var(--brand-blue-dark), #397fba 72%, #6d9bc4);
+  border-radius: 4px;
+  box-shadow: 0 6px 15px rgb(39 113 176 / 18%);
 }
 
-.brand-mark svg {
-  width: 34px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-width: 2.6;
+.dx-wordmark strong {
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.dx-wordmark span {
+  font-weight: 300;
+}
+
+.brand-divider {
+  width: 1px;
+  height: 22px;
+  background: rgb(33 56 74 / 20%);
+}
+
+.product-name {
+  white-space: nowrap;
 }
 
 .privacy-pill {
@@ -107,7 +125,7 @@ label[for="fileInput"]:focus-visible {
   gap: 7px;
   align-items: center;
   padding: 8px 12px;
-  color: #476057;
+  color: #315d80;
   font-size: 12px;
   font-weight: 650;
   background: rgb(255 255 255 / 48%);
@@ -135,15 +153,19 @@ label[for="fileInput"]:focus-visible {
 .eyebrow,
 .section-kicker {
   margin: 0;
-  color: #77807b;
+  color: #657b8c;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.17em;
 }
 
+.eyebrow strong {
+  color: var(--brand-blue);
+}
+
 .eyebrow span {
   padding: 0 5px;
-  color: #b88935;
+  color: var(--accent);
 }
 
 .hero h1 {
@@ -937,8 +959,18 @@ button:disabled {
 }
 
 .footer a {
-  color: #4f5d57;
+  color: var(--brand-blue-dark);
   font-weight: 700;
+}
+
+.footer-meta {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.footer-separator {
+  color: #b5babd;
 }
 
 .engine-status {
@@ -1127,9 +1159,37 @@ button:disabled {
     justify-content: center;
     padding: 20px 2px;
   }
+
+  .footer-meta {
+    gap: 5px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-separator {
+    display: none;
+  }
 }
 
 @media (max-width: 430px) {
+  .brand {
+    gap: 8px;
+  }
+
+  .dx-wordmark {
+    width: 112px;
+    height: 30px;
+    font-size: 11px;
+  }
+
+  .brand-divider {
+    height: 19px;
+  }
+
+  .product-name {
+    font-size: 12px;
+  }
+
   .segmented-control button {
     padding-inline: 7px;
   }
